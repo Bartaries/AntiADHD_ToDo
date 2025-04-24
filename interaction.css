@@ -1,0 +1,78 @@
+/* HOVER */
+
+.low:hover{
+    background-color: rgb(1, 104, 1, 0.1);
+}
+
+.medium:hover{
+    background-color: rgb(163, 91, 3, 0.1);
+}
+
+.high:hover{
+    background-color: rgb(136, 3, 3, 0.1);
+}
+
+.filters button:hover {
+    color: rgb(255, 251, 250);
+    background: rgba(255, 68, 68, 0.9) none repeat scroll 0% 0% / auto padding-box border-box;
+}
+
+.task-input button:hover {
+    background-color: rgba(205, 205, 205, 0.5);
+    color: rgb(211,211,211);
+    border-radius: 0 0 25px 25px;
+    width: 80%;
+    font-size: 25px;
+}
+
+.edit:hover{
+    color: rgb(255, 251, 250);
+    background: rgb(41, 153, 209) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 1px solid rgb(41, 153, 209);
+    font-size: 18px;
+    }
+
+.delete:hover{
+     color: rgb(255, 251, 250);
+        background: rgb(192, 15, 15) none repeat scroll 0% 0% / auto padding-box border-box;
+        border: 1px solid rgb(192, 15, 15);
+        font-size: 18px;
+    }
+    
+.abandoned:hover{
+    color: rgb(255, 251, 250);
+    background: rgb(255, 196, 0) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 1px solid rgb(255, 196, 0);
+    font-size: 18px;
+}
+
+.done:hover{
+    color: rgb(255, 251, 250);
+    background: rgb(34, 102, 25) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 1px solid rgb(34, 102, 25);
+    font-size: 18px;
+}
+
+.task-list li .task-text:hover{
+    text-decoration: line-through;
+}
+
+/* FOCUS */
+
+.task-input input[type="text"]:focus,
+.task-input input[type="datetime-local"]:focus,
+.task-input select:focus{
+    box-shadow: 0px 0px 24px 0px rgba(255, 255, 255, 0.51);
+    background-color: rgb(10, 11, 13);
+    color: rgb(255, 251, 250);
+    border-radius: 10px;
+}
+
+/* ACTIVE */
+
+.filters button.active {
+    background: rgba(255, 68, 68, 0.9);
+    color: rgb(255, 251, 250);
+}
+
+

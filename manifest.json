@@ -1,0 +1,15 @@
+{
+    "name": "Anti-ADHD ToDO",
+    "short_name": "ToDo",
+    "start_url": ".",
+    "display": "fullscreen",
+    "background_color": "#f8f9fa",
+    "theme_color": "#333",
+    "icons": [
+    {
+      "src": "/checklist.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

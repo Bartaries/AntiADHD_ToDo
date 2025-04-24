@@ -1,0 +1,69 @@
+.low{
+    border: 1px solid rgb(1, 104, 1);
+    background-color: rgb(1, 104, 1, 0.035);
+    backdrop-filter: blur(5px); 
+    transition: 1080ms;
+}
+
+.medium{
+    border: 1px solid rgb(163, 91, 3);
+    background-color: rgb(163, 91, 3, 0.035);
+    backdrop-filter: blur(5px);
+    transition: 1080ms;
+}
+
+.high{
+    border: 1px solid rgb(136, 3, 3);
+    background-color: rgb(136, 3, 3, 0.035);
+    backdrop-filter: blur(5px);
+    transition: 1080ms;
+}
+
+.low-txt{
+    color: rgb(1, 104, 1);
+}
+
+.medium-txt{
+    color: rgb(163, 91, 3);
+}
+
+.high-txt{
+    color: rgb(136, 3, 3);
+}
+
+.first-bg{
+    background-color:  rgb(27, 28, 29);
+    box-shadow: 0px 0px 100px -13px rgba(27, 28, 29, 1);
+    z-index: 50;
+}
+
+.second-bg{
+    background-color: rgb(205, 205, 205);
+}
+
+.main-gradient{
+    background: -webkit-linear-gradient(rgb(255, 68, 68), #333);
+}
+
+.flex-1 {
+    flex-grow: 1;
+    order: 3;
+    flex-basis: 20%;
+}
+
+.flex-2 {
+    flex-grow: 2;
+    order: 2;
+    flex-basis: 40%;
+}
+
+.flex-3 {
+    flex-grow: 3;
+    order: 1;
+    flex-basis: 40%;
+}
+
+.flex-1 .welcome {
+    width: 100%;
+    font-size: 48px;
+}

@@ -1,0 +1,381 @@
+@import url(interaction.css);
+@import url(appearance.css);
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    margin: inherit;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 50px 20px;
+    height: 100vh;
+    position: relative;
+    color: #333;
+}
+
+.welcome {
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 64px;
+    letter-spacing: -3.4px;
+    word-spacing: -3.8px;
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    text-decoration: none solid rgb(68, 68, 68);
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-align: center;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 10vh 20px;
+}
+
+.task-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    flex-grow: 3;
+    margin-bottom: 10vh;
+    width: 90%;
+}
+
+.task-input input[type="text"],
+.task-input input[type="datetime-local"],
+.task-input select,
+.task-input button {
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    background: inherit;
+    background-color: inherit;
+    font-size: 15px;
+    transition: 816ms;
+    height: auto;
+    color: rgba(205, 205, 205, 0.5)
+}
+
+.task-input input[type="text"]{
+    flex:2
+}
+
+.prompt {
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid rgba(205, 205, 205, 0.5);
+    background-color: transparent;
+    border-radius: 25px;
+    width: 90%;
+    height: 50%;
+    text-wrap: wrap;
+}
+
+.prompt-opt {
+    display: flex;
+    justify-content: space-between;
+    width: fit-content;  
+    border: 2px solid rgba(205, 205, 205, 0.5);
+    border-bottom: none;
+    background-color: transparent;
+    border-radius: 10px 10px 0 0;
+
+}
+
+.filters {
+    position: sticky;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.filters button{
+    border: none;
+    padding: 10px 15px;
+    margin: 0 5px;
+    width: 7vw;
+    background-color:  rgb(27, 28, 29);
+    color: #f8f9fa;
+}
+
+.task-input button {
+    padding: 10px 15px;
+    margin: 0 5px;
+    border: none;
+}
+
+.task-input button {
+    color: rgba(205, 205, 205, 0.5);
+}
+
+.task-list {
+    list-style: none;
+    padding: 50px 0px 0px 0px;
+    margin: 20px;
+}
+
+.task-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 20px 0px;
+    max-height: 60px;
+    font-weight: bold;
+    z-index: 999;
+}
+
+.task-list .done-visual {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.task-list li .task-text {
+    flex-grow: 1;
+    font-size: large;
+    overflow-y: auto;
+    max-height: 100px;
+    max-width: 350px;
+}
+
+.task-list li .task-actions button,
+.task-input button {
+    margin-left: 5px;
+    padding: 5px 5px;
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    border: none;
+}
+
+.btn {
+    cursor: pointer;
+    color: rgb(10, 11, 13);
+    transition: 1008ms;
+    font-weight: 100;
+    border-radius: 10px;
+    min-width: min-content;
+    min-height: min-content;
+    backdrop-filter: inherit;
+    background: inherit;
+    background-color: rgba(255, 255, 255, 0.515);
+    }
+
+.task-actions{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.flexed{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    min-height: inherit;
+    min-width: inherit;
+    flex-grow: 0;
+}
+
+.priority{
+    text-transform: uppercase;
+    font-weight: bold;
+    max-width: min-content;
+    min-height: inherit;
+    justify-content: flex-end;
+    margin: auto 10px;
+    font-size: 9px;
+}
+.priority p{
+    text-align: center;
+    max-width: min-content;
+    max-height: min-content;
+    margin: 0%;
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+.scrollin {
+    overflow-y: auto;
+}
+
+
+
+
+
+
+
+@media (max-width: 1400px) {
+    body {
+        overflow-x: hidden;
+        overflow-y: auto;
+        font-size: 14px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .section {
+        padding: 30px 15px;
+        height: auto;
+        min-height: fit-content;
+        width: 100%;
+    }
+
+    .welcome {
+        font-size: 36px;
+        letter-spacing: -1.5px;
+        word-spacing: -1.8px;
+        padding: 8vh 15px;
+    }
+
+    .task-input {
+        width: 100%;
+        flex-grow: 1;
+        justify-content: space-between;
+    }
+
+    .task-input input[type="text"],
+    .task-input input[type="datetime-local"],
+    .task-input select,
+    .task-input button {
+        font-size: 14px;
+        padding: 12px;
+        text-align: center;
+        min-height: 60px;
+        border: 1px solid rgba(205, 205, 205, 0.5);
+    }
+
+    .task-input button {
+        background-color: rgba(205, 205, 205, 0.5);
+        color: rgb(211,211,211);
+        border-radius: 25px;
+        width: 80%;
+        font-size: 25px;
+    }
+
+    .task-input input[type="text"]{
+        flex-grow: 1;
+        min-width: 0;
+    }
+
+    .prompt {
+        width: 100%;
+        border: none;
+        height: auto;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 10px;
+    }
+    
+    .prompt input[type="text"] {
+        margin-bottom: 10px;
+        min-height: 100px;
+        border: 1px solid rgba(205, 205, 205, 0.5);
+    }
+
+    .prompt-opt {
+        width: 100%;
+        justify-content: space-around;
+        border-radius: 20px;
+        border: none;
+        padding: 5px 0;
+    }
+
+    .filters {
+        margin-bottom: 15px;
+        padding: 0 10px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .filters button {
+        width: auto;
+        min-height: 8vh;
+        padding: 15px 10px;
+        font-size: 13px;
+        flex-grow: 1;
+        text-align: center;
+    }
+
+    .task-list {
+        padding: 30px 0px 0px 0px;
+        margin: 15px;
+        width: calc(100% - 30px);
+    }
+
+    .task-list li {
+        flex-direction: row;
+        align-items: center;
+        padding: 15px;
+        margin: 10px 0px;
+    }
+
+    .task-list li .task-text {
+        font-size: 16px;
+        max-width: 100%;
+        margin-bottom: 10px;
+        max-height: none;
+        margin-right: 0;
+        min-height: 1.2em;
+        line-height: normal;
+        display: block; 
+        color: #333;
+
+    }
+    
+    .task-list li .task-details {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .task-list li .task-actions button {
+        width: 40px;
+        height: 40px;
+        margin-left: 8px;
+    }
+
+    .task-input button {
+        margin-top: 10px;
+    }
+    
+    .control {
+        padding: 0 15px;
+    }
+
+    .task-actions {
+        flex-grow: 0;
+        margin-left: auto;
+    }
+    
+    .priority {
+        font-size: 10px;
+        margin: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
