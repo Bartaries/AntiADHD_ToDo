@@ -46,41 +46,41 @@ document.addEventListener('DOMContentLoaded', () => {
             if (task.abandoned) li.classList.add('abandoned-visual');
 
             li.innerHTML = `
-                <span class="task-text">${task.text}</span>
-                <div class="priority"><p class="${task.priority}-txt">${task.priority}</p></div>
-                <div class="task-actions">
-                    <button
-                        class="btn done"
-                        data-index="${originalIndex}"
-                        data-action="toggleDone"
-                        ${task.abandoned ? 'disabled' : ''}
-                        title="${task.done ? 'Oznacz jako do zrobienia' : 'Oznacz jako wykonane'}">
-                        ${task.done ? '<i class="bi bi-arrow-counterclockwise"></i>' : '<i class="bi bi-check-circle"></i>'}
-                    </button>
-                     <button
-                        class="btn edit"
-                        data-index="${originalIndex}"
-                        data-action="edit"
-                        ${task.abandoned || task.done ? 'disabled' : ''} /* Wyłącz, jeśli porzucone lub wykonane */
-                        title="Edytuj">
-                        <i class="bi bi-pencil-square"></i>
-                    </button>
-                    <button
-                        class="btn delete"
-                        data-index="${originalIndex}"
-                        data-action="delete"
-                        title="Usuń">
-                        <i class="bi bi-trash3"></i>
-                    </button>
-                    <button
-                        class="btn abandoned"
-                        data-index="${originalIndex}"
-                        data-action="abandoned"
-                        ${task.done ? 'disabled' : ''} /* Wyłącz, jeśli wykonane */
-                        title="${task.abandoned ? 'Przywróć zadanie' : 'Porzuć zadanie'}">
-                         ${task.abandoned ? '<i class="bi bi-arrow-clockwise"></i>' : '<i class="bi bi-x-circle"></i>'}
-                    </button>
-                </div>
+                    <span class="task-text">${task.text}</span>
+                    <div class="priority"><p class="${task.priority}-txt">${task.priority}</p></div>
+                    <div class="task-actions">
+                        <button
+                            class="btn done"
+                            data-index="${originalIndex}"
+                            data-action="toggleDone"
+                            ${task.abandoned ? 'disabled' : ''}
+                            title="${task.done ? 'Oznacz jako do zrobienia' : 'Oznacz jako wykonane'}">
+                            ${task.done ? '<i class="bi bi-arrow-counterclockwise"></i>' : '<i class="bi bi-check-circle"></i>'}
+                        </button>
+                        <button
+                            class="btn edit"
+                            data-index="${originalIndex}"
+                            data-action="edit"
+                            ${task.abandoned || task.done ? 'disabled' : ''} /* Wyłącz, jeśli porzucone lub wykonane */
+                            title="Edytuj">
+                            <i class="bi bi-pencil-square"></i>
+                        </button>
+                        <button
+                            class="btn delete"
+                            data-index="${originalIndex}"
+                            data-action="delete"
+                            title="Usuń">
+                            <i class="bi bi-trash3"></i>
+                        </button>
+                        <button
+                            class="btn abandoned"
+                            data-index="${originalIndex}"
+                            data-action="abandoned"
+                            ${task.done ? 'disabled' : ''} /* Wyłącz, jeśli wykonane */
+                            title="${task.abandoned ? 'Przywróć zadanie' : 'Porzuć zadanie'}">
+                            ${task.abandoned ? '<i class="bi bi-arrow-clockwise"></i>' : '<i class="bi bi-x-circle"></i>'}
+                        </button>
+                    </div>
             `;
             taskList.appendChild(li);
         });

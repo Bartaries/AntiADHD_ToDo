@@ -137,7 +137,7 @@ body {
     z-index: 999;
 }
 
-.task-list .done-visual {
+.task-list .done-visual, .task-list .abandoned-visual {
     text-decoration: line-through;
     color: #999;
 }
